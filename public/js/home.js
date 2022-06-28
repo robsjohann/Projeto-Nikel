@@ -44,8 +44,6 @@ function checkLogged() {
     }
 
     if(!logged) {
-        saveSession(logged, session);
-
         window.location.href = "index.html"; 
         return;
     }

@@ -41,8 +41,6 @@ function checkLogged() {
     }
 
     if(!logged) {
-        saveSession(logged, session);
-
         window.location.href = "index.html"; 
         return;
     }
@@ -67,10 +65,10 @@ function getTransactions() {
     const transactions = data.transactions;
     let transactionsHtml = ``;
 
-    if(transactions.lenght) {
+    if(transactions.length) {
         transactions.forEach((item) => {
             let type = "Entrada";
-
+ 
             if(item.type === "2"){
                 type = "Saída";
             }
